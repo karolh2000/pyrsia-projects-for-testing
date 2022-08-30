@@ -2,8 +2,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.example</groupId>
-    <artifactId>pyrsia.maven.example</artifactId>
+    <groupId>example</groupId>
+    <artifactId>example</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
 
@@ -25,7 +25,7 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>org.example.HelloWorld</mainClass>
+                            <mainClass>example.HelloWorld</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
