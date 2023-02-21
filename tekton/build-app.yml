@@ -1,0 +1,19 @@
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+ name: build-app
+spec:
+ resources:
+   inputs:
+     - name: source
+       type: git
+ steps:
+   - name: maven-build
+     image: docker.io/maven:latest
+     command:
+       - mvn
+     args:
+       - clean
+       - test
+       - package
+     workingDir: "/workspace/source/"

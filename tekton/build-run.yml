@@ -1,0 +1,12 @@
+apiVersion: tekton.dev/v1beta1
+kind: TaskRun
+metadata:
+ name: build-run
+spec:
+ resources:
+   inputs:
+     - name: source
+       resourceRef:
+         name: git-source
+ taskRef:
+   name: build-app
