@@ -16,9 +16,14 @@ jobs:
     - name: Build the project
       run:
         kubectl apply --filename /home/runner/work/pyrsia-projects-for-testing/pyrsia-projects-for-testing/tekton/
-    - name: Test service URLs
+    - name: Install Tekton CLI
       run: |
-        minikube service list
-        minikube service example --url
-        echo "------------------opening the service------------------"
-        curl $(minikube service example --url)        
+        wget https://mirror.openshift.com/pub/openshift-v4/clients/pipeline/0.21.0/tkn-linux-amd64-0.21.0.tar.gz
+        sudo tar xvzf tkn-linux-amd64-0.21.0.tar.gz -C /usr/local/bin/ tkn
+    - name: Print logs
+      run: |
+        tkn taskrun list
+        tkn taskrun logs build-run
+        
+
+
