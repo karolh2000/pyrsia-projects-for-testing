@@ -22,8 +22,9 @@ jobs:
         sudo tar xvzf tkn-linux-amd64-0.21.0.tar.gz -C /usr/local/bin/ tkn
     - name: Print logs
       run: |
-        chmod +x /home/runner/work/pyrsia-projects-for-testing/pyrsia-projects-for-testing/tekton/print_logs.sh
-        /home/runner/work/pyrsia-projects-for-testing/pyrsia-projects-for-testing/tekton/print_logs.sh
+        pwd
+        chmod +x /home/runner/work/pyrsia-projects-for-testing/pyrsia-projects-for-testing/.github/workflows/print_logs.sh 
+        /home/runner/work/pyrsia-projects-for-testing/pyrsia-projects-for-testing/.github/workflows/print_logs.sh 
         
 
 
